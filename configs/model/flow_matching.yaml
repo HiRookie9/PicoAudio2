@@ -1,0 +1,17 @@
+defaults:
+  - autoencoder: stable_vae
+  - backbone: audio_udit
+  - _self_
+
+
+content_dim: 1024
+cfg_drop_ratio: 0.2
+
+
+_target_: models.flow_matching.DummyContentAudioFlowMatching
+content_encoder:
+  _target_: models.content_encoder.caption_encoder.ContentEncoder
+  text_encoder:
+    _target_: models.content_encoder.text_encoder.T5TextEncoder
+    model_name: "/hpc_stor03/sjtu_home/yaoyun.zhang/model_ckpts/google-flan-t5-large"
+  
