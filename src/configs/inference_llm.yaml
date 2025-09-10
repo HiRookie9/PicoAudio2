@@ -1,0 +1,16 @@
+exp_dir: /mnt/petrelfs/zhengzihao/workspace/pico/src/exp/diffusion
+ckpt_dir : /mnt/petrelfs/zhengzihao/workspace/pico/src/exp/diffusion/checkpoints/test
+
+input_text: "a dog barks the a cat meows"
+input_onset: null
+input_length: "10.0"
+time_control: true
+
+wav_dir: test_data_llm
+noise_scheduler:
+  type: DDIMScheduler
+  name: "/mnt/petrelfs/zhengzihao/cache/stabilityai-stable-diffusion-2-1"
+
+latent_shape: [128, 500]
+num_steps: 50
+guidance_scale: 7.5

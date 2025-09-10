@@ -1,0 +1,24 @@
+exp_dir: exp/diffusion
+ckpt_dir : exp/diffusion/checkpoints/test
+
+test_dataloader:
+  _target_: torch.utils.data.DataLoader
+  dataset:
+    _target_: data_module.dataset.Pico_Dataset
+    jsonl_file : /mnt/petrelfs/zhengzihao/workspace/pico/data/json/example.jsonl
+    target_sr: 24000
+  batch_size: 1 # per device batch size
+  shuffle: False
+  num_workers: 4
+  collate_fn:
+    _target_: data_module.collate_function.PaddingCollate
+    pad_keys: []
+
+wav_dir: test_data_1
+noise_scheduler:
+  type: DDIMScheduler
+  name: "/mnt/petrelfs/zhengzihao/cache/stabilityai-stable-diffusion-2-1"
+
+latent_shape: [128, 500]
+num_steps: 50
+guidance_scale: 7.5

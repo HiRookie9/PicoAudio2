@@ -1,0 +1,8 @@
+defaults:
+  - datasets@example: example
+
+train_data_list:
+  - ${..example.train}
+
+val_data_list:
+  - ${..example.val}

@@ -1,0 +1,1 @@
+accelerate launch --config_file configs/accelerate/nvidia/1gpu.yaml inference.py
