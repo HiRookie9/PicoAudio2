@@ -1,8 +1,0 @@
-train:
-  _target_: data_module.pico_dataset_merge.Text_Onset_2_Audio_Dataset
-  jsonl_file : "/hpc_stor03/sjtu_home/zihao.zheng/data/audiocaps_v2/json/train/data_pico_max_new.jsonl"
-  target_sr: ${sample_rate}
-val:
-  _target_: data_module.pico_dataset_merge.Text_Onset_2_Audio_Dataset
-  jsonl_file : "/hpc_stor03/sjtu_home/zihao.zheng/data/audiocaps_v2/json/val/data_pico.jsonl"
-  target_sr: ${sample_rate}

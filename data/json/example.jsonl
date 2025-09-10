@@ -1,0 +1,10 @@
+{"location": "data/audio/train/audiotime/syn_1.wav", "onset": "machine_gun__2.02-7.167_7.897-10.0", "captions": "machine gun 2 times", "replace": "True", "length": "10.0"}
+{"location": "data/audio/train/audiotime/syn_2.wav", "onset": "music__1.414-10.0", "captions": "music 1 times", "replace": "True", "length": "10.0"}
+{"location": "data/audio/train/audiotime/syn_3.wav", "onset": "shout__0.972-1.799_2.923-3.75--water__6.314-10.0", "captions": "shout 2 times and water 1 times", "replace": "True", "length": "10.0"}
+{"location": "data/audio/train/audiotime/syn_4.wav", "onset": "typewriter__1.226-2.587_3.129-4.49_5.437-6.798--beep__8.49-8.79", "captions": "typewriter 3 times and beep 1 times", "replace": "True", "length": "10.0"}
+{"location": "data/audio/train/audiotime/syn_5.wav", "onset": "music__1.219-6.296_7.732-10.0", "captions": "music 2 times", "replace": "True", "length": "10.0"}
+{"location": "data/audio/train/audiocaps/Y__0Fp4K-2Ew.wav", "onset": "a_toilet_flushes__0.080-2.880--loud_vibrations__7.320-9.720", "captions": "a toilet flushes followed by loud vibrations", "replace": "False", "length": "10.0"}
+{"location": "data/audio/train/audiocaps/Y__1zYI_2aCg.wav", "onset": "random", "captions": "a woman and man speaks as water flows and splashes", "replace": "False", "length": "10.0"}
+{"location": "data/audio/train/audiocaps/Y__8O7tZPwsI.wav", "onset": "someone_sprays_air_on_a_hard_surface__0.080-9.960", "captions": "someone sprays air on a hard surface", "replace": "False", "length": "10.0"}
+{"location": "data/audio/train/audiocaps/Y__8ompVQG6M.wav", "onset": "a_machine_works__7.640-7.680--a_man_speaks__0.080-1.880_3.000-5.240", "captions": "a machine works while a man speaks", "replace": "False", "length": "10.0"}
+{"location": "data/audio/train/audiocaps/Y__9Dyyjz0Kg.wav", "onset": "random", "captions": "a vehicle engine idles and spraying takes place", "replace": "False", "length": "10.0"}

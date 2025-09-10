@@ -1,8 +1,0 @@
-defaults:
-  - datasets@pico: pico
-
-train_data_list:
-  - ${..pico.train}
-
-val_data_list:
-  - ${..pico.val}
