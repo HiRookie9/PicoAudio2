@@ -36,6 +36,7 @@ Before running inference, **edit your configuration files to set the correct loc
 After configuration, run batch inference with:
 
 ```bash
+cd src
 bash bash_scripts/test.sh
 ```
 
@@ -47,6 +48,7 @@ bash bash_scripts/test.sh
 To run LLM-based inference, use:
 
 ```bash
+cd src
 bash bash_scripts/test_llm.sh
 ```
 
@@ -56,33 +58,23 @@ bash bash_scripts/test_llm.sh
 Refer to the VAE training section in our work [SoloAudio](https://github.com/WangHelin1997/SoloAudio)
 
 #### T2A Diffusion Model
-Prepare your data (see example in `src/dataset/meta_example.csv`), then run:
+Prepare your data and pretrained models, then run:
 
 ```bash
 cd src
-accelerate launch train.py
+bash bash_scripts/train_pico_4gpus.sh
 ```
 
 ## Todo
-- [x] Release Gradio Demo along with checkpoints [EzAudio Space](https://huggingface.co/spaces/OpenSound/EzAudio)
-- [x] Release ControlNet Demo along with checkpoints [EzAudio ControlNet Space](https://huggingface.co/spaces/OpenSound/EzAudio-ControlNet)
-- [x] Release inference code
-- [x] Release training pipeline and dataset
-- [x] Improve API and support automatic ckpts downloading 
-- [ ] Release checkpoints for stage1 and stage2 [WIP]
+- [] Release training dataset and checkpoints
+- [] Release Gradio Demo along with checkpoints
 
-## Reference
+## Author's Note
 
-If you find the code useful for your research, please consider citing:
+Thank you for your attention and use!  
+This is my first open-source project. The code has been refined for simplicity and readability before release.  
+If you encounter any problems or have questions, please open an issue on GitHub, or contact me via email(rookie9@sjtu.edu.cn). I will respond as soon as possible.
 
-```bibtex
-@article{hai2024ezaudio,
-  title={EzAudio: Enhancing Text-to-Audio Generation with Efficient Diffusion Transformer},
-  author={Hai, Jiarui and Xu, Yong and Zhang, Hao and Li, Chenxing and Wang, Helin and Elhilali, Mounya and Yu, Dong},
-  journal={arXiv preprint arXiv:2409.10819},
-  year={2024}
-}
-```
+---
 
-## Acknowledgement
-Some codes are borrowed from or inspired by: [U-Vit](https://github.com/baofff/U-ViT), [Pixel-Art](https://github.com/PixArt-alpha/PixArt-alpha), [Huyuan-DiT](https://github.com/Tencent/HunyuanDiT), and [Stable Audio](https://github.com/Stability-AI/stable-audio-tools).
+
