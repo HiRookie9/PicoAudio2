@@ -25,9 +25,9 @@ pip install -r requirements.txt
 
 Before running inference, **edit your configuration files to set the correct local paths** for required model checkpoints and data:
 
-- FLAN-T5 path [https://huggingface.co/google/flan-t5-large](https://huggingface.co/google/flan-t5-large)
-- StableVAE path
-- Noise scheduler path
+- FLAN-T5: [google/flan-t5-large](https://huggingface.co/google/flan-t5-large)
+- VAE: [OpenSound/EzAudio](https://huggingface.co/OpenSound/EzAudio/tree/main/ckpts/vae)
+- Noise scheduler: [stabilityai/stable-diffusion-2-1](https://huggingface.co/stabilityai/stable-diffusion-2-1/tree/main/scheduler)
 - PicoAudio2 experiment/checkpoint path (to be released)
 - Dataset path
 
