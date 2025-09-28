@@ -21,28 +21,33 @@ pip install -r requirements.txt
 
 ## Usage
 
-You can use the model with the following code:
+### 1. Configure Model and Dataset Paths
 
-```python
-from api.ezaudio import EzAudio
-import torch
-import soundfile as sf
+Before running inference, **edit your configuration files to set the correct local paths** for required model checkpoints and data:
 
-# load model
-device = 'cuda' if torch.cuda.is_available() else 'cpu'
-ezaudio = EzAudio(model_name='s3_xl', device=device)
+- FLAN-T5 path
+- StableVAE path
+- Noise scheduler path
+- PicoAudio2 experiment/checkpoint path (to be released)
+- Dataset path
 
-# text to audio genertation
-prompt = "a dog barking in the distance"
-sr, audio = ezaudio.generate_audio(prompt)
-sf.write(f'{prompt}.wav', audio, sr)
+### 2. Run Batch Inference
 
-# audio inpainting
-prompt = "A train passes by, blowing its horns"
-original_audio = 'ref.wav'
-sr, audio = ezaudio.editing_audio(prompt, boundary=2, gt_file=original_audio,
-                                  mask_start=1, mask_length=5)
-sf.write(f'{prompt}_edit.wav', audio, sr)
+After configuration, run batch inference with:
+
+```bash
+bash bash_scripts/test.sh
+```
+
+### 3. Single Data Inference or LLM-based TDC Generation
+
+- Enter your LLM API key in `utils/llm.py`.
+- Edit `configs/inference_llm.yaml` to set model and data paths.
+
+To run LLM-based inference, use:
+
+```bash
+bash bash_scripts/test_llm.sh
 ```
 
 ## Training
