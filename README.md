@@ -1,30 +1,23 @@
 # PicoAudio2: Temporal Controllable Text-to-Audio Generation with Natural Language Description
-[![Official Page](https://img.shields.io/badge/Official%20Page-EzAudio-blue?logo=Github&style=flat-square)](https://hirookie9.github.io/PicoAudio2-Page/)
-[![arXiv](https://img.shields.io/badge/arXiv-2409.10819-brightgreen.svg?style=flat-square)](https://arxiv.org/abs/2509.00683)
+[![Official Page](https://img.shields.io/badge/Official%20Page-PicoAudio2-blue?logo=Github&style=flat-square)](https://hirookie9.github.io/PicoAudio2-Page/)
+[![arXiv](https://img.shields.io/badge/arXiv-2509.00683-brightgreen.svg?style=flat-square)](https://arxiv.org/abs/2509.00683)
 [![Hugging Face Models](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Models-blue)](https://hirookie9.github.io/PicoAudio2-Page/)
 
-🟣 EzAudio is a diffusion-based text-to-audio generation model. Designed for real-world audio applications, EzAudio brings together high-quality audio synthesis with lower computational demands.
+🟣 PicoAudio2 is a temporal controllable Text-to-Audio model with natural language description.
 
-🎛 Play with EzAudio for text-to-audio generation, editing, and inpainting: [EzAudio Space](https://huggingface.co/spaces/OpenSound/EzAudio)
-
-🎮 EzAudio-ControlNet is available: [EzAudio-ControlNet Space](https://huggingface.co/spaces/OpenSound/EzAudio-ControlNet)
-
-<!-- We want to thank Hugging Face Space and Gradio for providing incredible demo platform. -->
 
 ## Installation
 
 Clone the repository:
 ```
-git clone git@github.com:haidog-yaqub/EzAudio.git
+git clone https://github.com/HiRookie9/PicoAudio2.git
 ```
 Install the dependencies:
 ```
-cd EzAudio
+cd PicoAudio2/src
 pip install -r requirements.txt
 ```
 
-Download checkponts (Optional):
-[https://huggingface.co/OpenSound/EzAudio](https://huggingface.co/OpenSound/EzAudio/tree/main)
 
 ## Usage
 
