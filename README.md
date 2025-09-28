@@ -25,7 +25,7 @@ pip install -r requirements.txt
 
 Before running inference, **edit your configuration files to set the correct local paths** for required model checkpoints and data:
 
-- FLAN-T5 path
+- FLAN-T5 path [https://huggingface.co/google/flan-t5-large](https://huggingface.co/google/flan-t5-large)
 - StableVAE path
 - Noise scheduler path
 - PicoAudio2 experiment/checkpoint path (to be released)
@@ -66,8 +66,8 @@ bash bash_scripts/train_pico_4gpus.sh
 ```
 
 ## Todo
-- [] Release training dataset and checkpoints
-- [] Release Gradio Demo along with checkpoints
+- [ ]  Release training dataset and checkpoints
+- [ ]  Release Gradio Demo along with checkpoints
 
 ## Author's Note
 
