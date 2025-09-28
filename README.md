@@ -49,7 +49,7 @@ Before running inference, **edit your configuration files to set the correct loc
 - VAE: [OpenSound/EzAudio](https://huggingface.co/OpenSound/EzAudio/tree/main/ckpts/vae)
 - Noise scheduler: [stabilityai/stable-diffusion-2-1](https://huggingface.co/stabilityai/stable-diffusion-2-1/tree/main/scheduler)
 - PicoAudio2 experiment/checkpoint path (to be released)
-- Dataset path
+- Test Dataset path
 
 ### 2. Run Batch Inference
 
@@ -81,7 +81,8 @@ bash bash_scripts/train_pico_4gpus.sh
 ```
 
 ## Todo
-- [ ]  Release training dataset and checkpoints
+- [ ]  Release post-processing code for eval
+- [ ]  Release full dataset and checkpoints
 - [ ]  Release Gradio Demo along with checkpoints
 
 ## Author's Note
@@ -91,7 +92,7 @@ This is my first open-source project. The code has been refined for simplicity a
 If you encounter any problems or have questions, please open an issue on GitHub, or contact me via email(rookie9@sjtu.edu.cn). I will respond as soon as possible.
 
 ## Acknowledgement
-Thanks for these works: [EzAudio](https://github.com/haidog-yaqub/EzAudio), [audioldm_eval](https://github.com/haoheliu/audioldm_eval)
+Thanks for these works: [PicoAudio](https://github.com/zeyuxie29/PicoAudio), [EzAudio](https://github.com/haidog-yaqub/EzAudio), [audioldm_eval](https://github.com/haoheliu/audioldm_eval), [TAG](https://github.com/wsntxxn/TextToAudioGrounding)
 
 ---
 
