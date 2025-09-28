@@ -12,12 +12,32 @@ Clone the repository:
 ```
 git clone https://github.com/HiRookie9/PicoAudio2.git
 ```
-Install the dependencies:
+
+### 1. Create and Activate Conda Environment
+
+```bash
+# Create a new conda environment with Python 3.10
+conda create -n picoaudio2 python=3.10 -y
+
+# Activate the environment
+conda activate picoaudio2
 ```
-cd PicoAudio2/src
+
+### 2. Install PyTorch and Related Packages
+
+```bash
+# Install PyTorch, TorchAudio, TorchVision, and TorchData (CUDA 11.8)
+conda install pytorch==2.3.0 torchvision==0.18.0 torchaudio==2.3.0 torchdata==0.11.0 pytorch-cuda=11.8 -c pytorch -c nvidia
+```
+
+### 3. Install Other Requirements
+
+```bash
+# Install other dependencies
 pip install -r requirements.txt
 ```
 
+---
 
 ## Usage
 
