@@ -89,7 +89,7 @@ bash bash_scripts/train_pico_4gpus.sh
 
 Thank you for your attention and use!  
 This is my first open-source project. The code has been refined for simplicity and readability before release.  
-If you encounter any problems or have questions, please open an issue on GitHub, or contact me via email(rookie9@sjtu.edu.cn). I will respond as soon as possible.
+If you encounter any problems or have questions, please open an issue on GitHub, or contact me via email(rookie9@sjtu.edu.cn). I will respond as soon as possible.(Sorry but after National Day of China)
 
 ## Acknowledgement
 Thanks for these works: [PicoAudio](https://github.com/zeyuxie29/PicoAudio), [EzAudio](https://github.com/haidog-yaqub/EzAudio), [audioldm_eval](https://github.com/haoheliu/audioldm_eval), [TAG](https://github.com/wsntxxn/TextToAudioGrounding)
