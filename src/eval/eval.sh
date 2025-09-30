@@ -1,6 +1,9 @@
-python tta.py \
-   --ref_audio_jsonl /hpc_stor03/sjtu_home/zihao.zheng/data/audiocaps_v2/eval_json/pico_new/post_new/epoch43_7.5/ref_audio.jsonl \
-   --ref_caption_jsonl  /hpc_stor03/sjtu_home/zihao.zheng/data/audiocaps_v2/eval_json/pico_new/post_new/epoch43_7.5/ref_caption.jsonl \
-   --gen_audio_jsonl /hpc_stor03/sjtu_home/zihao.zheng/data/audiocaps_v2/eval_json/pico_new/post_new/epoch43_7.5/gen_audio.jsonl \
-   --output_file /hpc_stor03/sjtu_home/zihao.zheng/data/audiocaps_v2/eval_json/pico_new/post_new/epoch43_7.5/result_new.txt \
-   -c 4
+python eval.py \
+   --ref_audio_jsonl eval_json/ref_audio.jsonl \
+   --ref_caption_jsonl  eval_json/ref_caption.jsonl \
+   --ref_onset_jsonl eval_json/ref_onset.jsonl \
+   --gen_audio_jsonl eval_json/gen_audio.jsonl \
+   --output_file eval_json/result_test.txt \
+   -c 4 #\
+   #--f1_seg
+   
