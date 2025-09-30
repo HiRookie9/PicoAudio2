@@ -1,7 +1,7 @@
 # PicoAudio2: Temporal Controllable Text-to-Audio Generation with Natural Language Description
 [![Official Page](https://img.shields.io/badge/Official%20Page-PicoAudio2-blue?logo=Github&style=flat-square)](https://hirookie9.github.io/PicoAudio2-Page/)
 [![arXiv](https://img.shields.io/badge/arXiv-2509.00683-brightgreen.svg?style=flat-square)](https://arxiv.org/abs/2509.00683)
-[![Hugging Face Models](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Models-blue)](https://hirookie9.github.io/PicoAudio2-Page/)
+[![Hugging Face Models](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Models-blue)](https://huggingface.co/spaces/rookie9/PicoAudio2)
 
 🟣 PicoAudio2 is a temporal controllable Text-to-Audio model with natural language description.
 
@@ -83,7 +83,7 @@ bash bash_scripts/train_pico_4gpus.sh
 ## Todo
 - [ ]  Release post-processing code for eval
 - [ ]  Release full dataset and checkpoints
-- [ ]  Release Gradio Demo along with checkpoints
+- [x]  Release Gradio Demo along with checkpoints(fixing the bug in the checkpoint, which leads lower quality)
 
 ## Author's Note
 
