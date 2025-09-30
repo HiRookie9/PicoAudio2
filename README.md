@@ -83,7 +83,7 @@ bash bash_scripts/train_pico_4gpus.sh
 ## Todo
 - [ ]  Release post-processing code for eval
 - [ ]  Release full dataset and checkpoints
-- [x]  Release Gradio Demo along with checkpoints(fixing the bug in the checkpoint, which leads lower quality)
+- [ ]  Release Gradio Demo along with checkpoints(fixing the bug in the checkpoint, which leads lower quality)
 
 ## Author's Note
 
