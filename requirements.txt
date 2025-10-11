@@ -1,0 +1,13 @@
+gradio==5.44.1
+torch
+torchaudio
+librosa
+soundfile==0.13.1
+numpy==1.26.4
+requests==2.28.1
+tqdm==4.67.1
+einops==0.8.1
+diffusers==0.35.1
+alias_free_torch==0.0.6
+transformers==4.55.4
+sentencepiece==0.1.96
