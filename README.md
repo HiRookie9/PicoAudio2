@@ -41,7 +41,7 @@ pip install -r requirements.txt
 ## Inference
 You can see the demo on the website [Huggingface Online Inference](https://huggingface.co/spaces/wsntxxn/PicoAudio2) and [Github Demo](https://hirookie9.github.io/PicoAudio2-Page/).
 Or you can use the *"app.py"* script provided by website [Huggingface Inference](https://huggingface.co/spaces/wsntxxn/PicoAudio2/blob/main/) to generate.
-Huggingface Online Inference uses xi-api as a preprocessor, and we also provide a llm preprocessing script consistent with the paper in *"utils/llmxiapi.py"*. And you can utilize GPT using the script in this repo *"utils/llm.py"*
+Huggingface Online Inference uses xi-api as a preprocessor, and we also provide a llm preprocessing script in *"utils/llmxiapi.py"*. And you can utilize GPT using the script in this repo *"utils/llm.py"*.
 <!--
 <[GoogleDrive](https://drive.google.com/file/d/1oez7kzFFhqU9JZQhqJdDshXrRQczBmlp/view?usp=sharing) 
 -->
@@ -97,7 +97,7 @@ bash bash_scripts/train_pico_4gpus.sh
 
 Thank you for your attention and use!  
 This is my first open-source project. The code has been refined for simplicity and readability before release.  
-If you encounter any problems or have questions, please open an issue on GitHub, or contact me via email(rookie9@sjtu.edu.cn). I will respond as soon as possible.(Sorry but after National Day of China)
+If you encounter any problems or have questions, please open an issue on GitHub, or contact me via email(rookie9@sjtu.edu.cn). I will respond as soon as possible.
 
 ## Acknowledgement
 Thanks for these works: [PicoAudio](https://github.com/zeyuxie29/PicoAudio), [EzAudio](https://github.com/haidog-yaqub/EzAudio), [audioldm_eval](https://github.com/haoheliu/audioldm_eval), [TAG](https://github.com/wsntxxn/TextToAudioGrounding)
