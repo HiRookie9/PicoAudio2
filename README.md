@@ -1,8 +1,7 @@
 # PicoAudio2: Temporal Controllable Text-to-Audio Generation with Natural Language Description
 [![Official Page](https://img.shields.io/badge/Official%20Page-PicoAudio2-blue?logo=Github&style=flat-square)](https://hirookie9.github.io/PicoAudio2-Page/)
 [![arXiv](https://img.shields.io/badge/arXiv-2509.00683-brightgreen.svg?style=flat-square)](https://arxiv.org/abs/2509.00683)
-[![Hugging Face Models](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Models-blue)](https://huggingface.co/rookie9/PicoAudio2)
-[![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/wsntxxn/PicoAudio2)
+[![Hugging Face Models](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Models-blue)](https://huggingface.co/spaces/wsntxxn/PicoAudio2)
 
 🟣 PicoAudio2 is a temporal controllable Text-to-Audio model with natural language description.
 
@@ -41,34 +40,8 @@ pip install -r requirements.txt
 ---
 ## Inference
 You can see the demo on the website [Huggingface Online Inference](https://huggingface.co/spaces/wsntxxn/PicoAudio2) and [Github Demo](https://hirookie9.github.io/PicoAudio2-Page/).
-Alternatively, you can generate samples as follows:
-```bash
-# Install other dependencies
-git clone -b infer https://github.com/HiRookie9/PicoAudio2.git
-pip install -r requirements.txt
-```
-Then quickly generate audio with the following code:
-```python
-import torch
-import soundfile as sf
-from transformers import AutoModel
-
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-model = AutoModel.from_pretrained("rookie9/PicoAudio2", trust_remote_code=True).to(device)
-
-content = {
-        "caption": "a dog barks",
-        "onset": "a_dog_barks__1.0-2.0_3.0-4.0",
-        "length": 5.0
-    }
-
-with torch.no_grad():
-    waveform = model(content)
-    sf.write("output.wav", waveform[0, 0].cpu().numpy(), samplerate=24000)
-```
-Or you can use the script *"utils/infer.py"* to infer with llm (please enter your API key in *"utils/llm.py"*)
-
-There are still some bugs when loading checkpoints with AutoModel, which may slightly reduce sound quality. Please use the following code if you are pursuing a better user experience or evaluating models. And we will fix this issue before 2025/10/18.
+Or you can use the *"app.py"* script provided by website [Huggingface Inference](https://huggingface.co/spaces/wsntxxn/PicoAudio2/blob/main/) to generate.
+Huggingface Online Inference uses xi-api as a preprocessor, and we also provide a llm preprocessing script in *"utils/llmxiapi.py"*. And you can utilize GPT using the script in this repo *"utils/llm.py"*.
 <!--
 <[GoogleDrive](https://drive.google.com/file/d/1oez7kzFFhqU9JZQhqJdDshXrRQczBmlp/view?usp=sharing) 
 -->
@@ -127,8 +100,4 @@ This is my first open-source project. The code has been refined for simplicity a
 If you encounter any problems or have questions, please open an issue on GitHub, or contact me via email(rookie9@sjtu.edu.cn). I will respond as soon as possible.
 
 ## Acknowledgement
-Thanks for these works: [PicoAudio](https://github.com/zeyuxie29/PicoAudio), [EzAudio](https://github.com/haidog-yaqub/EzAudio), [audioldm_eval](https://github.com/haoheliu/audioldm_eval), [TAG](https://github.com/wsntxxn/TextToAudioGrounding)
-
----
-
-
+Thanks for these works: [UniFlow-Audio](https://github.com/wsntxxn/UniFlow-Audio), [PicoAudio](https://github.com/zeyuxie29/PicoAudio), [EzAudio](https://github.com/haidog-yaqub/EzAudio), [audioldm_eval](https://github.com/haoheliu/audioldm_eval), [TAG](https://github.com/wsntxxn/TextToAudioGrounding)
