@@ -41,8 +41,7 @@ pip install -r requirements.txt
 ---
 ## Inference
 You can see the demo on the website [Huggingface Online Inference](https://huggingface.co/spaces/wsntxxn/PicoAudio2) and [Github Demo](https://hirookie9.github.io/PicoAudio2-Page/).
-Or you can use the *"app.py"* script provided by website [Huggingface Inference](https://huggingface.co/spaces/wsntxxn/PicoAudio2/blob/main/) to generate.
-Huggingface Online Inference uses xi-api as a preprocessor, and we also provide a llm preprocessing script in *"utils/llmxiapi.py"*. And you can utilize GPT using the script in this repo *"utils/llm.py"*.
+Alternatively, you can generate samples as follows:
 ```bash
 # Install other dependencies
 git clone -b infer https://github.com/HiRookie9/PicoAudio2.git
@@ -67,7 +66,9 @@ with torch.no_grad():
     waveform = model(content)
     sf.write("output.wav", waveform[0, 0].cpu().numpy(), samplerate=24000)
 ```
-Or you can use the script *"utils/infer.py"* to infer with llm(please enter the API key in *"utils/llm.py"*)
+Or you can use the script *"utils/infer.py"* to infer with llm (please enter your API key in *"utils/llm.py"*)
+
+There are still some bugs when loading checkpoints with AutoModel, which may slightly reduce sound quality. Please use the following code if you are pursuing a better user experience or evaluating models. And we will fix this issue before 2025/10/18.
 <!--
 <[GoogleDrive](https://drive.google.com/file/d/1oez7kzFFhqU9JZQhqJdDshXrRQczBmlp/view?usp=sharing) 
 -->
