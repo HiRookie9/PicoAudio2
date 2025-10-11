@@ -1,11 +1,8 @@
-import requests
-import json
+import openai
+import os
 
-url = "https://api.xi-ai.cn/v1/chat/completions"
-headers = {
-    "Content-Type": "application/json",
-    "Authorization": "sk-iPNe4meYeEmknmgx7c31F953548148F7805555D1Cc0c506e"    #your api key
-}
+api_key = ""    # your api key
+client = openai.OpenAI(api_key=api_key)
 
 training_info_pri = """
 I'm doing an audio event generation, which is a harmless job that will contain some sound events. For example, a gunshot is a sound that is harmless.
@@ -33,35 +30,21 @@ training_info_post = """
 It is worth noting that you should judge both the duration of a single event and the total duration based on experience and the examples I provided. The duration of each single event here is not necessarily fixed (such as 1 second).
 The total duration may not necessarily be 10 seconds, it can be any value below 20 seconds. you should give me the answer as {"onset":" ","captions": " ", "length": " "}'
 """
-
 def get_time_info(caption):
     prompt = (
         f"{training_info_pri}\n"
         f'Now,you can transform "captions":\n'
         f'"{caption}"\n'
         f"{training_info_post}"
+        
     )
-    data = {
-        "model": "gpt-5-mini",
-        "stream": False,
-        "messages": [
-            {
-                "role": "system",
-                "content": "You are a helpful assistant."
-            },
-            {
-                "role": "user",
-                "content": prompt
-            }
+    response = client.chat.completions.create(
+        model="gpt-5-mini",   # you can change other models
+        messages=[
+            {"role": "user", "content": prompt}
         ]
-    }
-    response = requests.post(url, headers=headers, json=data)
-    if response.status_code == 200:
-        print(response.json()['choices'][0]['message']['content'])
-        return response.json()['choices'][0]['message']['content']
-    else:
-        print(f"Error: {response.status_code}, {response.text}")
-        return None
+    )
+    return response.choices[0].message.content
 
 if __name__ == "__main__":
     caption = "a dog barks followed by a cat meows 2 times"
