@@ -43,6 +43,31 @@ pip install -r requirements.txt
 You can see the demo on the website [Huggingface Online Inference](https://huggingface.co/spaces/wsntxxn/PicoAudio2) and [Github Demo](https://hirookie9.github.io/PicoAudio2-Page/).
 Or you can use the *"app.py"* script provided by website [Huggingface Inference](https://huggingface.co/spaces/wsntxxn/PicoAudio2/blob/main/) to generate.
 Huggingface Online Inference uses xi-api as a preprocessor, and we also provide a llm preprocessing script in *"utils/llmxiapi.py"*. And you can utilize GPT using the script in this repo *"utils/llm.py"*.
+```bash
+# Install other dependencies
+git clone -b infer https://github.com/HiRookie9/PicoAudio2.git
+pip install -r requirements.txt
+```
+You can quickly generate audio with the following code:
+```python
+import torch
+import soundfile as sf
+from transformers import AutoModel
+
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+model = AutoModel.from_pretrained("rookie9/PicoAudio2", trust_remote_code=True).to(device)
+
+content = {
+        "caption": "a dog barks",
+        "onset": "a_dog_barks__1.0-2.0_3.0-4.0",
+        "length": 5.0
+    }
+
+with torch.no_grad():
+    waveform = model(content)
+    sf.write("output.wav", waveform[0, 0].cpu().numpy(), samplerate=24000)
+```
+Or you can use the script *"utils/infer.py"* to infer with llm(please enter the API key in *"utils/llm.py"*)
 <!--
 <[GoogleDrive](https://drive.google.com/file/d/1oez7kzFFhqU9JZQhqJdDshXrRQczBmlp/view?usp=sharing) 
 -->
