@@ -38,7 +38,15 @@ pip install -r requirements.txt
 ```
 
 ---
+## Inference
+You can see the demo on the website [Huggingface Online Inference](https://huggingface.co/spaces/wsntxxn/PicoAudio2) and [Github Demo](https://hirookie9.github.io/PicoAudio2-Page/).
+Or you can use the *"app.py"* script provided by website [Huggingface Inference](https://huggingface.co/spaces/wsntxxn/PicoAudio2/blob/main/) to generate.
+Huggingface Online Inference uses xi-api as a preprocessor, and we also provide a llm preprocessing script consistent with the paper in *"utils/llmxiapi.py"*. And you can utilize GPT using the script in this repo *"utils/llm.py"*
+<!--
+<[GoogleDrive](https://drive.google.com/file/d/1oez7kzFFhqU9JZQhqJdDshXrRQczBmlp/view?usp=sharing) 
+-->
 
+---
 ## Usage
 
 ### 1. Configure Model and Dataset Paths
