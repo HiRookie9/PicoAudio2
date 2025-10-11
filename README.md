@@ -47,7 +47,7 @@ Alternatively, you can generate samples as follows:
 git clone -b infer https://github.com/HiRookie9/PicoAudio2.git
 pip install -r requirements.txt
 ```
-You can quickly generate audio with the following code:
+Then quickly generate audio with the following code:
 ```python
 import torch
 import soundfile as sf
