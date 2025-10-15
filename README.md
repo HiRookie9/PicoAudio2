@@ -39,7 +39,7 @@ with torch.no_grad():
 
 Alternatively, you can use the script *"utils/infer.py"* to infer with llm (please enter your API key in *"utils/llm.py"*).
 
-There are still some bugs when loading checkpoints with AutoModel, which may slightly reduce sound quality. If you are pursuing a better user experience or evaluating models, please use the following code instead. We will fix this issue before 2025/10/18.
+There are still some bugs when loading checkpoints with AutoModel, which may slightly reduce sound quality. If you are pursuing a better user experience or evaluating models, please use the following code instead. We will fix this issue soon.
 
 ---
 
