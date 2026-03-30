@@ -6,6 +6,7 @@
 
 🟣 PicoAudio2 is a temporal controllable Text-to-Audio model with natural language description.
 
+🎉 PicoAudio2 has been accepted by ICASSP2026!
 
 ## Quick start
 You can see the demo on the website [Huggingface Online Inference](https://huggingface.co/spaces/wsntxxn/PicoAudio2) and [Github Demo](https://hirookie9.github.io/PicoAudio2-Page/).
@@ -85,7 +86,7 @@ Before running inference, **edit your configuration files to set the correct loc
 - FLAN-T5: [google/flan-t5-large](https://huggingface.co/google/flan-t5-large)
 - VAE: [OpenSound/EzAudio](https://huggingface.co/OpenSound/EzAudio/tree/main/ckpts/vae)
 - Noise scheduler: [stabilityai/stable-diffusion-2-1](https://huggingface.co/stabilityai/stable-diffusion-2-1/tree/main/scheduler)
-- PicoAudio2 experiment/checkpoint path (to be released)
+- PicoAudio2 experiment/checkpoint path: [PicoAudio2_ckpt](https://drive.google.com/drive/folders/1LzasAbAt5XRVzEkbLEWO_T7J_CinnlxD?usp=sharing)
 - Test Dataset path
 
 ### 2. Run Batch Inference
@@ -116,11 +117,6 @@ Prepare your data and pretrained models, then run:
 cd src
 bash bash_scripts/train_pico_4gpus.sh
 ```
-
-## Todo
-- [ ]  Release post-processing code for eval
-- [ ]  Release full dataset and checkpoints
-- [ ]  Release Gradio Demo along with checkpoints(fixing the bug in the checkpoint, which leads lower quality)
 
 ## Author's Note
 
