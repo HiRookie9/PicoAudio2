@@ -87,7 +87,7 @@ Before running inference, **edit your configuration files to set the correct loc
 - VAE: [OpenSound/EzAudio](https://huggingface.co/OpenSound/EzAudio/tree/main/ckpts/vae)
 - Noise scheduler: [stabilityai/stable-diffusion-2-1](https://huggingface.co/stabilityai/stable-diffusion-2-1/tree/main/scheduler)
 - PicoAudio2 experiment/checkpoint path: [PicoAudio2_ckpt](https://drive.google.com/drive/folders/1LzasAbAt5XRVzEkbLEWO_T7J_CinnlxD?usp=sharing)
-- Test Dataset path
+- Dataset path: [PicoAudio2_datasets](https://drive.google.com/drive/folders/1thPTWbGT6Pawrn6LY34mAcltP25uTucr?usp=drive_link)
 
 ### 2. Run Batch Inference
 
